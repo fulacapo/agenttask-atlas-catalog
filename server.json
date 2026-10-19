@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.agenttaskatlas/catalog",
+  "title": "AgentTask Atlas",
+  "description": "Read-only catalog of verified MCP servers and Agent Skills by dev task, with practical verdicts.",
+  "version": "1.0.0",
+  "websiteUrl": "https://agenttaskatlas.com/mcp",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://agenttaskatlas.com/api/mcp"
+    }
+  ]
+}

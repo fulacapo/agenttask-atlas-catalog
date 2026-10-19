@@ -1,0 +1,149 @@
+[
+  {
+    "slug": "browser-testing",
+    "title": "Browser & E2E testing",
+    "kind": "dev-task",
+    "count": 3,
+    "url": "https://agenttaskatlas.com/dev-task/browser-testing"
+  },
+  {
+    "slug": "database",
+    "title": "Databases & SQL",
+    "kind": "dev-task",
+    "count": 8,
+    "url": "https://agenttaskatlas.com/dev-task/database"
+  },
+  {
+    "slug": "repo-git",
+    "title": "Git & GitHub repos",
+    "kind": "dev-task",
+    "count": 3,
+    "url": "https://agenttaskatlas.com/dev-task/repo-git"
+  },
+  {
+    "slug": "code-review",
+    "title": "Code review",
+    "kind": "dev-task",
+    "count": 2,
+    "url": "https://agenttaskatlas.com/dev-task/code-review"
+  },
+  {
+    "slug": "ci-cd",
+    "title": "CI/CD",
+    "kind": "dev-task",
+    "count": 2,
+    "url": "https://agenttaskatlas.com/dev-task/ci-cd"
+  },
+  {
+    "slug": "infra-deploy",
+    "title": "Infra & deploy",
+    "kind": "dev-task",
+    "count": 9,
+    "url": "https://agenttaskatlas.com/dev-task/infra-deploy"
+  },
+  {
+    "slug": "observability-debug",
+    "title": "Debugging & observability",
+    "kind": "dev-task",
+    "count": 7,
+    "url": "https://agenttaskatlas.com/dev-task/observability-debug"
+  },
+  {
+    "slug": "docs-research",
+    "title": "Library docs & research",
+    "kind": "dev-task",
+    "count": 6,
+    "url": "https://agenttaskatlas.com/dev-task/docs-research"
+  },
+  {
+    "slug": "web-scraping",
+    "title": "Web fetching & scraping",
+    "kind": "dev-task",
+    "count": 3,
+    "url": "https://agenttaskatlas.com/dev-task/web-scraping"
+  },
+  {
+    "slug": "frontend-ui",
+    "title": "Frontend & UI",
+    "kind": "dev-task",
+    "count": 6,
+    "url": "https://agenttaskatlas.com/dev-task/frontend-ui"
+  },
+  {
+    "slug": "payments",
+    "title": "Payments",
+    "kind": "dev-task",
+    "count": 1,
+    "url": "https://agenttaskatlas.com/dev-task/payments"
+  },
+  {
+    "slug": "files-local",
+    "title": "Local files",
+    "kind": "dev-task",
+    "count": 2,
+    "url": "https://agenttaskatlas.com/dev-task/files-local"
+  },
+  {
+    "slug": "docs-writing",
+    "title": "Docs & writing",
+    "kind": "dev-task",
+    "count": 5,
+    "url": "https://agenttaskatlas.com/dev-task/docs-writing"
+  },
+  {
+    "slug": "knowledge-memory",
+    "title": "Knowledge & memory",
+    "kind": "dev-task",
+    "count": 2,
+    "url": "https://agenttaskatlas.com/dev-task/knowledge-memory"
+  },
+  {
+    "slug": "build-mcp",
+    "title": "Build MCP servers & skills",
+    "kind": "dev-task",
+    "count": 2,
+    "url": "https://agenttaskatlas.com/dev-task/build-mcp"
+  },
+  {
+    "slug": "build-ai-apps",
+    "title": "Build AI apps",
+    "kind": "dev-task",
+    "count": 1,
+    "url": "https://agenttaskatlas.com/dev-task/build-ai-apps"
+  },
+  {
+    "slug": "planning",
+    "title": "Planning & reasoning",
+    "kind": "dev-task",
+    "count": 2,
+    "url": "https://agenttaskatlas.com/dev-task/planning"
+  },
+  {
+    "slug": "prototype",
+    "title": "Prototyping",
+    "kind": "dev-task",
+    "count": 1,
+    "url": "https://agenttaskatlas.com/dev-task/prototype"
+  },
+  {
+    "slug": "utilities",
+    "title": "Utilities",
+    "kind": "dev-task",
+    "count": 2,
+    "url": "https://agenttaskatlas.com/dev-task/utilities"
+  },
+  {
+    "slug": "mcp-server",
+    "title": "MCP servers",
+    "kind": "type",
+    "count": 35,
+    "url": "https://agenttaskatlas.com/type/mcp-server"
+  },
+  {
+    "slug": "agent-skill",
+    "title": "Agent Skills",
+    "kind": "type",
+    "count": 8,
+    "url": "https://agenttaskatlas.com/type/agent-skill"
+  }
+]

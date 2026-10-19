@@ -1,0 +1,1281 @@
+[
+  {
+    "slug": "mcp-filesystem",
+    "name": "Filesystem",
+    "vendor": "MCP steering group (reference)",
+    "type": "mcp-server",
+    "tasks": [
+      "files-local"
+    ],
+    "agents": [
+      "Claude Desktop",
+      "VS Code",
+      "GitHub Copilot"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Read/write files inside directories you allow on the command line.",
+    "credentials": "None",
+    "maintenance": "Monorepo release v1.0.0 on 2026-10-11 publishes @modelcontextprotocol/server-filesystem 1.0.0 (npm); last commit 2026-10-10 (path-scoped)",
+    "lastActivity": "2026-10-11",
+    "install": "Run `npx -y @modelcontextprotocol/server-filesystem <allowed-dir>` from your client's MCP config (see README).",
+    "installUrl": "https://github.com/modelcontextprotocol/servers/blob/main/src/filesystem/README.md",
+    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+    "license": "NOASSERTION",
+    "verifiedOn": "2026-10-17",
+    "archived": false,
+    "verdict": "Pick it when the agent must read/write project files; scope it to the directories you pass on the command line.",
+    "release": {
+      "tag": "v1.0.0",
+      "date": "2026-10-11",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/v1.0.0"
+    }
+  },
+  {
+    "slug": "mcp-git",
+    "name": "Git",
+    "vendor": "MCP steering group (reference)",
+    "type": "mcp-server",
+    "tasks": [
+      "repo-git"
+    ],
+    "agents": [
+      "Claude Desktop",
+      "VS Code",
+      "GitHub Copilot",
+      "Zed"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Reads and modifies a local Git repository (status, diff, commit, branch).",
+    "credentials": "None",
+    "maintenance": "Monorepo release v1.0.0 on 2026-10-11 publishes mcp-server-git 2026.10.10 (PyPI); last commit 2026-10-10 (path-scoped)",
+    "lastActivity": "2026-10-11",
+    "install": "Run with `uvx mcp-server-git --repository <path>` (see README).",
+    "installUrl": "https://github.com/modelcontextprotocol/servers/blob/main/src/git/README.md",
+    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/git",
+    "license": "NOASSERTION",
+    "verifiedOn": "2026-10-17",
+    "archived": false,
+    "verdict": "Pick it for local Git work (status, diff, commit, branch) without a hosted account; it can modify the repo.",
+    "release": {
+      "tag": "v1.0.0",
+      "date": "2026-10-11",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/v1.0.0"
+    }
+  },
+  {
+    "slug": "mcp-fetch",
+    "name": "Fetch",
+    "vendor": "MCP steering group (reference)",
+    "type": "mcp-server",
+    "tasks": [
+      "docs-research",
+      "web-scraping"
+    ],
+    "agents": [
+      "VS Code"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Makes outbound HTTP requests to URLs the model chooses; README warns it can reach local/internal IPs.",
+    "credentials": "None",
+    "maintenance": "Monorepo release v1.0.0 on 2026-10-11 publishes mcp-server-fetch 2026.10.10 (PyPI); last commit 2026-10-10 (path-scoped)",
+    "lastActivity": "2026-10-11",
+    "install": "Run with `uvx mcp-server-fetch` (see README).",
+    "installUrl": "https://github.com/modelcontextprotocol/servers/blob/main/src/fetch/README.md",
+    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
+    "license": "NOASSERTION",
+    "verifiedOn": "2026-10-17",
+    "archived": false,
+    "verdict": "Pick it to pull a web page into context; the README warns it can reach local/internal IPs, so restrict it.",
+    "release": {
+      "tag": "v1.0.0",
+      "date": "2026-10-11",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/v1.0.0"
+    }
+  },
+  {
+    "slug": "mcp-memory",
+    "name": "Memory (knowledge graph)",
+    "vendor": "MCP steering group (reference)",
+    "type": "mcp-server",
+    "tasks": [
+      "knowledge-memory"
+    ],
+    "agents": [
+      "Claude Desktop",
+      "VS Code",
+      "GitHub Copilot"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Writes a local JSON knowledge-graph file.",
+    "credentials": "None",
+    "maintenance": "Monorepo release v1.0.0 on 2026-10-11 publishes @modelcontextprotocol/server-memory 1.0.0 (npm); last commit 2026-10-10 (path-scoped)",
+    "lastActivity": "2026-10-11",
+    "install": "Run `npx -y @modelcontextprotocol/server-memory` (see README).",
+    "installUrl": "https://github.com/modelcontextprotocol/servers/blob/main/src/memory/README.md",
+    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+    "license": "NOASSERTION",
+    "verifiedOn": "2026-10-17",
+    "archived": false,
+    "verdict": "Pick it for persistent notes across sessions; it stores a local JSON knowledge graph, no cloud account.",
+    "release": {
+      "tag": "v1.0.0",
+      "date": "2026-10-11",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/v1.0.0"
+    }
+  },
+  {
+    "slug": "mcp-sequential-thinking",
+    "name": "Sequential Thinking",
+    "vendor": "MCP steering group (reference)",
+    "type": "mcp-server",
+    "tasks": [
+      "planning"
+    ],
+    "agents": [
+      "Claude Desktop",
+      "VS Code",
+      "Codex",
+      "GitHub Copilot"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "No external access; structures step-by-step reasoning.",
+    "credentials": "None",
+    "maintenance": "Monorepo release v1.0.0 on 2026-10-11 publishes @modelcontextprotocol/server-sequential-thinking 1.0.0 (npm); last commit 2026-10-10 (path-scoped)",
+    "lastActivity": "2026-10-11",
+    "install": "Run `npx -y @modelcontextprotocol/server-sequential-thinking` (see README).",
+    "installUrl": "https://github.com/modelcontextprotocol/servers/blob/main/src/sequentialthinking/README.md",
+    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+    "license": "NOASSERTION",
+    "verifiedOn": "2026-10-17",
+    "archived": false,
+    "verdict": "Pick it to make the agent plan step by step; no external access and no credentials.",
+    "release": {
+      "tag": "v1.0.0",
+      "date": "2026-10-11",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/v1.0.0"
+    }
+  },
+  {
+    "slug": "mcp-time",
+    "name": "Time",
+    "vendor": "MCP steering group (reference)",
+    "type": "mcp-server",
+    "tasks": [
+      "utilities"
+    ],
+    "agents": [
+      "VS Code",
+      "Zed"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "No external access; time and timezone conversion.",
+    "credentials": "None",
+    "maintenance": "Monorepo release v1.0.0 on 2026-10-11 publishes mcp-server-time 2026.10.10 (PyPI); last commit 2026-10-10 (path-scoped)",
+    "lastActivity": "2026-10-11",
+    "install": "Run with `uvx mcp-server-time` (see README).",
+    "installUrl": "https://github.com/modelcontextprotocol/servers/blob/main/src/time/README.md",
+    "sourceUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
+    "license": "NOASSERTION",
+    "verifiedOn": "2026-10-17",
+    "archived": false,
+    "verdict": "Pick it when tasks need correct current time or timezone conversion; no external access.",
+    "release": {
+      "tag": "v1.0.0",
+      "date": "2026-10-11",
+      "url": "https://github.com/modelcontextprotocol/servers/releases/tag/v1.0.0"
+    }
+  },
+  {
+    "slug": "skill-webapp-testing",
+    "name": "webapp-testing",
+    "vendor": "Anthropic",
+    "type": "agent-skill",
+    "tasks": [
+      "browser-testing",
+      "frontend-ui"
+    ],
+    "agents": [
+      "Claude Code",
+      "Claude.ai",
+      "Claude API"
+    ],
+    "agentsSource": "anthropics/skills README (Claude Code, Claude.ai, Claude API)",
+    "permissions": "Runs local scripts (Playwright) against local web apps.",
+    "credentials": "None",
+    "maintenance": "No GitHub release; last commit 2026-04-20 (path-scoped)",
+    "lastActivity": "2026-04-20",
+    "install": "Claude Code: `/plugin marketplace add anthropics/skills`, then install example-skills (see repo README).",
+    "installUrl": "https://github.com/anthropics/skills/blob/main/skills/webapp-testing/SKILL.md",
+    "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/webapp-testing",
+    "license": "not stated",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Pick it to have the agent test a local web app with Playwright scripts; runs code on your machine."
+  },
+  {
+    "slug": "skill-mcp-builder",
+    "name": "mcp-builder",
+    "vendor": "Anthropic",
+    "type": "agent-skill",
+    "tasks": [
+      "build-mcp"
+    ],
+    "agents": [
+      "Claude Code",
+      "Claude.ai",
+      "Claude API"
+    ],
+    "agentsSource": "anthropics/skills README (Claude Code, Claude.ai, Claude API)",
+    "permissions": "Guidance plus scripts that create code in your project.",
+    "credentials": "None",
+    "maintenance": "No GitHub release; last commit 2026-04-20 (path-scoped)",
+    "lastActivity": "2026-04-20",
+    "install": "Claude Code: `/plugin marketplace add anthropics/skills`, then install example-skills.",
+    "installUrl": "https://github.com/anthropics/skills/blob/main/skills/mcp-builder/SKILL.md",
+    "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/mcp-builder",
+    "license": "not stated",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Pick it when you are building your own MCP server; it guides and scaffolds code in your project."
+  },
+  {
+    "slug": "skill-skill-creator",
+    "name": "skill-creator",
+    "vendor": "Anthropic",
+    "type": "agent-skill",
+    "tasks": [
+      "build-mcp",
+      "docs-writing"
+    ],
+    "agents": [
+      "Claude Code",
+      "Claude.ai",
+      "Claude API"
+    ],
+    "agentsSource": "anthropics/skills README (Claude Code, Claude.ai, Claude API)",
+    "permissions": "Writes skill files in your project.",
+    "credentials": "None",
+    "maintenance": "No GitHub release; last commit 2026-04-20 (path-scoped)",
+    "lastActivity": "2026-04-20",
+    "install": "Claude Code: `/plugin marketplace add anthropics/skills`, then install example-skills.",
+    "installUrl": "https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md",
+    "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/skill-creator",
+    "license": "not stated",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Pick it to write a new Agent Skill; it creates skill files in your project."
+  },
+  {
+    "slug": "skill-frontend-design",
+    "name": "frontend-design",
+    "vendor": "Anthropic",
+    "type": "agent-skill",
+    "tasks": [
+      "frontend-ui"
+    ],
+    "agents": [
+      "Claude Code",
+      "Claude.ai",
+      "Claude API"
+    ],
+    "agentsSource": "anthropics/skills README (Claude Code, Claude.ai, Claude API)",
+    "permissions": "Instructions only; the agent writes UI code in your project.",
+    "credentials": "None",
+    "maintenance": "No GitHub release; last commit 2026-09-03 (path-scoped)",
+    "lastActivity": "2026-09-03",
+    "install": "Claude Code: `/plugin marketplace add anthropics/skills`, then install example-skills.",
+    "installUrl": "https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md",
+    "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/frontend-design",
+    "license": "not stated",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Pick it for UI work; instructions only, so nothing runs beyond the code the agent writes."
+  },
+  {
+    "slug": "skill-claude-api",
+    "name": "claude-api",
+    "vendor": "Anthropic",
+    "type": "agent-skill",
+    "tasks": [
+      "build-ai-apps"
+    ],
+    "agents": [
+      "Claude Code",
+      "Claude.ai",
+      "Claude API"
+    ],
+    "agentsSource": "anthropics/skills README (Claude Code, Claude.ai, Claude API)",
+    "permissions": "Writes code that calls the Claude API.",
+    "credentials": "ANTHROPIC_API_KEY for the code you build (per SKILL.md).",
+    "maintenance": "No GitHub release; last commit 2026-10-09 (path-scoped)",
+    "lastActivity": "2026-10-09",
+    "install": "Claude Code: `/plugin marketplace add anthropics/skills`, then install the plugin that contains it.",
+    "installUrl": "https://github.com/anthropics/skills/blob/main/skills/claude-api/SKILL.md",
+    "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/claude-api",
+    "license": "not stated",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Pick it when building an app on the Claude API; the code you ship needs ANTHROPIC_API_KEY."
+  },
+  {
+    "slug": "skill-web-artifacts-builder",
+    "name": "web-artifacts-builder",
+    "vendor": "Anthropic",
+    "type": "agent-skill",
+    "tasks": [
+      "frontend-ui",
+      "prototype"
+    ],
+    "agents": [
+      "Claude Code",
+      "Claude.ai",
+      "Claude API"
+    ],
+    "agentsSource": "anthropics/skills README (Claude Code, Claude.ai, Claude API)",
+    "permissions": "Runs local build scripts (React/Tailwind bundling).",
+    "credentials": "None",
+    "maintenance": "No GitHub release; last commit 2026-04-20 (path-scoped)",
+    "lastActivity": "2026-04-20",
+    "install": "Claude Code: `/plugin marketplace add anthropics/skills`, then install example-skills.",
+    "installUrl": "https://github.com/anthropics/skills/blob/main/skills/web-artifacts-builder/SKILL.md",
+    "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/web-artifacts-builder",
+    "license": "not stated",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Pick it for quick React/Tailwind prototypes; it runs local bundling scripts."
+  },
+  {
+    "slug": "skill-doc-coauthoring",
+    "name": "doc-coauthoring",
+    "vendor": "Anthropic",
+    "type": "agent-skill",
+    "tasks": [
+      "docs-writing"
+    ],
+    "agents": [
+      "Claude Code",
+      "Claude.ai",
+      "Claude API"
+    ],
+    "agentsSource": "anthropics/skills README (Claude Code, Claude.ai, Claude API)",
+    "permissions": "Instructions only; edits documents you provide.",
+    "credentials": "None",
+    "maintenance": "No GitHub release; last commit 2025-12-04 (path-scoped)",
+    "lastActivity": "2025-12-04",
+    "install": "Claude Code: `/plugin marketplace add anthropics/skills`, then install example-skills.",
+    "installUrl": "https://github.com/anthropics/skills/blob/main/skills/doc-coauthoring/SKILL.md",
+    "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/doc-coauthoring",
+    "license": "not stated",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Pick it to co-write specs or docs; instructions only, edits the documents you provide."
+  },
+  {
+    "slug": "skill-pdf",
+    "name": "pdf",
+    "vendor": "Anthropic",
+    "type": "agent-skill",
+    "tasks": [
+      "docs-writing",
+      "files-local"
+    ],
+    "agents": [
+      "Claude Code",
+      "Claude.ai",
+      "Claude API"
+    ],
+    "agentsSource": "anthropics/skills README (Claude Code, Claude.ai, Claude API)",
+    "permissions": "Runs local Python scripts that read and write PDF files.",
+    "credentials": "None",
+    "maintenance": "No GitHub release; last commit 2026-02-06 (path-scoped)",
+    "lastActivity": "2026-02-06",
+    "install": "Claude Code: `/plugin install document-skills@anthropic-agent-skills` (see repo README).",
+    "installUrl": "https://github.com/anthropics/skills/blob/main/skills/pdf/SKILL.md",
+    "sourceUrl": "https://github.com/anthropics/skills/tree/main/skills/pdf",
+    "license": "not stated",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Pick it to read, fill or generate PDFs; runs local Python scripts on your files."
+  },
+  {
+    "slug": "github-mcp-server",
+    "name": "GitHub MCP Server",
+    "vendor": "GitHub",
+    "type": "mcp-server",
+    "tasks": [
+      "repo-git",
+      "code-review",
+      "ci-cd"
+    ],
+    "agents": [
+      "Claude Code",
+      "Claude Desktop",
+      "Cursor",
+      "VS Code",
+      "Windsurf",
+      "Codex",
+      "Gemini CLI",
+      "GitHub Copilot",
+      "Zed"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Acts on GitHub with the scopes of your token/OAuth app: repos, issues, PRs, Actions (toolsets configurable, read-only mode available).",
+    "credentials": "GitHub OAuth (remote server) or a Personal Access Token (GITHUB_PERSONAL_ACCESS_TOKEN).",
+    "maintenance": "Release v2.0.2 on 2026-10-08; last commit 2026-10-15",
+    "lastActivity": "2026-10-08",
+    "install": "Remote: add https://api.githubcopilot.com/mcp/ in your client; local: Docker image ghcr.io/github/github-mcp-server (see README).",
+    "installUrl": "https://github.com/github/github-mcp-server/blob/main/README.md",
+    "sourceUrl": "https://github.com/github/github-mcp-server",
+    "license": "MIT",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Pick it for issues, PRs and Actions from the agent; limit toolsets or use read-only mode for review tasks."
+  },
+  {
+    "slug": "playwright-mcp",
+    "name": "Playwright MCP",
+    "vendor": "Microsoft",
+    "type": "mcp-server",
+    "tasks": [
+      "browser-testing",
+      "web-scraping"
+    ],
+    "agents": [
+      "Claude Code",
+      "Claude Desktop",
+      "Cursor",
+      "VS Code",
+      "Windsurf",
+      "Codex",
+      "Gemini CLI",
+      "GitHub Copilot",
+      "Cline",
+      "Goose"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Controls a real browser: navigates, clicks, fills forms, can access any site the browser can.",
+    "credentials": "None",
+    "maintenance": "Release v0.0.83 on 2026-09-28; last commit 2026-10-08",
+    "lastActivity": "2026-09-28",
+    "install": "Add `npx @playwright/mcp@latest` to your client MCP config (README has per-client steps).",
+    "installUrl": "https://github.com/microsoft/playwright-mcp/blob/main/README.md",
+    "sourceUrl": "https://github.com/microsoft/playwright-mcp",
+    "license": "Apache-2.0",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Pick it to let the agent drive a real browser for E2E checks; it can reach any site the browser can."
+  },
+  {
+    "slug": "sentry-mcp",
+    "name": "Sentry MCP",
+    "vendor": "Sentry",
+    "type": "mcp-server",
+    "tasks": [
+      "observability-debug"
+    ],
+    "agents": [
+      "Claude Code",
+      "Cursor"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Reads issues, events and projects in your Sentry org; can update issues.",
+    "credentials": "Sentry OAuth (remote) or a Sentry user auth token (stdio).",
+    "maintenance": "Release cli@0.47.0 on 2026-10-05; last commit 2026-10-17",
+    "lastActivity": "2026-10-05",
+    "install": "Remote server https://mcp.sentry.dev/mcp, or stdio `npx @sentry/mcp-server` (see README).",
+    "installUrl": "https://github.com/getsentry/toolkit/blob/main/README.md",
+    "sourceUrl": "https://github.com/getsentry/toolkit",
+    "license": "NOASSERTION",
+    "verifiedOn": "2026-10-17",
+    "archived": false,
+    "verdict": "Pick it to debug production errors from Sentry inside the agent; needs Sentry OAuth or a user token."
+  },
+  {
+    "slug": "stripe-mcp",
+    "name": "Stripe MCP / Agent Toolkit",
+    "vendor": "Stripe",
+    "type": "mcp-server",
+    "tasks": [
+      "payments"
+    ],
+    "agents": [
+      "Claude Code",
+      "Cursor",
+      "Codex"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Creates and reads Stripe objects (customers, payments, products) with your key's permissions.",
+    "credentials": "Stripe OAuth for the remote server (other key options: see docs.stripe.com/mcp).",
+    "maintenance": "No GitHub release; last commit 2026-10-17",
+    "lastActivity": "2026-10-16",
+    "install": "Remote server `https://mcp.stripe.com` via OAuth; connection docs at docs.stripe.com/mcp (linked from README).",
+    "installUrl": "https://github.com/stripe/ai/blob/main/README.md",
+    "sourceUrl": "https://github.com/stripe/ai",
+    "license": "MIT",
+    "verifiedOn": "2026-10-17",
+    "archived": false,
+    "verdict": "Pick it to inspect or create Stripe objects; use the remote server with OAuth and a restricted scope."
+  },
+  {
+    "slug": "supabase-mcp",
+    "name": "Supabase MCP",
+    "vendor": "Supabase",
+    "type": "mcp-server",
+    "tasks": [
+      "database",
+      "infra-deploy"
+    ],
+    "agents": [
+      "Cursor",
+      "Windsurf"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Manages Supabase projects: SQL, migrations, branches, edge functions; read-only and project-scoped modes documented.",
+    "credentials": "Supabase OAuth (remote) or a personal access token.",
+    "maintenance": "Release mcp-server-supabase-v0.14.0 on 2026-10-14; last commit 2026-10-16",
+    "lastActivity": "2026-10-14",
+    "install": "Remote https://mcp.supabase.com/mcp (see README for flags like read_only and project_ref).",
+    "installUrl": "https://github.com/supabase/mcp/blob/main/README.md",
+    "sourceUrl": "https://github.com/supabase/mcp",
+    "license": "Apache-2.0",
+    "verifiedOn": "2026-10-17",
+    "archived": false,
+    "verdict": "Pick it for Supabase SQL and migrations; use the documented read-only and project-scoped modes."
+  },
+  {
+    "slug": "cloudflare-mcp",
+    "name": "Cloudflare MCP servers",
+    "vendor": "Cloudflare",
+    "type": "mcp-server",
+    "tasks": [
+      "infra-deploy",
+      "observability-debug",
+      "docs-research"
+    ],
+    "agents": [
+      "Cursor"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Remote servers act on your Cloudflare account (Workers, observability, DNS analytics, docs) per OAuth scopes.",
+    "credentials": "Cloudflare OAuth (per server).",
+    "maintenance": "Release containers-mcp@0.2.19 on 2026-08-11; last commit 2026-10-09",
+    "lastActivity": "2026-08-11",
+    "install": "Add a remote URL like https://docs.mcp.cloudflare.com/mcp or https://observability.mcp.cloudflare.com/mcp (list in README).",
+    "installUrl": "https://github.com/cloudflare/mcp-server-cloudflare/blob/main/README.md",
+    "sourceUrl": "https://github.com/cloudflare/mcp-server-cloudflare",
+    "license": "Apache-2.0",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Pick it for Workers, observability and Cloudflare docs; each remote server uses its own OAuth scopes."
+  },
+  {
+    "slug": "context7",
+    "name": "Context7",
+    "vendor": "Upstash",
+    "type": "mcp-server",
+    "tasks": [
+      "docs-research"
+    ],
+    "agents": [
+      "Cursor",
+      "VS Code"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Sends library names/queries to Context7's hosted service and returns docs.",
+    "credentials": "Optional Context7 API key (higher rate limits).",
+    "maintenance": "Release @upstash/context7-mcp@4.4.3 on 2026-10-19; last commit 2026-10-19",
+    "lastActivity": "2026-10-19",
+    "install": "Remote https://mcp.context7.com/mcp or `npx -y @upstash/context7-mcp` (see README).",
+    "installUrl": "https://github.com/upstash/context7/blob/master/README.md",
+    "sourceUrl": "https://github.com/upstash/context7",
+    "license": "MIT",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Pick it for up-to-date library docs in prompts; queries go to Context7's hosted service.",
+    "release": {
+      "tag": "@upstash/context7-mcp@4.4.3",
+      "date": "2026-10-19",
+      "url": "https://github.com/upstash/context7/releases/tag/%40upstash%2Fcontext7-mcp%404.4.3"
+    }
+  },
+  {
+    "slug": "aws-mcp",
+    "name": "AWS MCP Servers",
+    "vendor": "AWS Labs",
+    "type": "mcp-server",
+    "tasks": [
+      "infra-deploy",
+      "docs-research",
+      "database"
+    ],
+    "agents": [
+      "Claude Code",
+      "Claude Desktop",
+      "Cursor",
+      "VS Code",
+      "Windsurf",
+      "GitHub Copilot",
+      "Cline"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Each server acts on AWS with your local credentials/profile; scope depends on the IAM role.",
+    "credentials": "AWS credentials (profile / IAM) for servers that call AWS; docs server needs none.",
+    "maintenance": "Release 2026.10.20261015170211 on 2026-10-16; last commit 2026-10-16",
+    "lastActivity": "2026-10-16",
+    "install": "Pick a server from the README table, e.g. `uvx awslabs.aws-documentation-mcp-server@latest`, or the remote AWS MCP Server (preview) via `mcp-proxy-for-aws`.",
+    "installUrl": "https://github.com/awslabs/mcp/blob/main/README.md",
+    "sourceUrl": "https://github.com/awslabs/mcp",
+    "license": "Apache-2.0",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Pick the specific AWS server you need; the docs server needs no credentials, others use your IAM profile."
+  },
+  {
+    "slug": "terraform-mcp",
+    "name": "Terraform MCP Server",
+    "vendor": "HashiCorp",
+    "type": "mcp-server",
+    "tasks": [
+      "infra-deploy"
+    ],
+    "agents": [
+      "Claude Code",
+      "Claude Desktop",
+      "Cursor",
+      "VS Code",
+      "Codex"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Queries Terraform Registry; with a token, works with HCP Terraform/TFE workspaces.",
+    "credentials": "Optional TFE_TOKEN for HCP Terraform / Enterprise features.",
+    "maintenance": "Release v1.3.0 on 2026-08-26; last commit 2026-10-15",
+    "lastActivity": "2026-08-26",
+    "install": "Docker image hashicorp/terraform-mcp-server or released binary (see README).",
+    "installUrl": "https://github.com/hashicorp/terraform-mcp-server/blob/main/README.md",
+    "sourceUrl": "https://github.com/hashicorp/terraform-mcp-server",
+    "license": "MPL-2.0",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Pick it for Terraform Registry lookups; add TFE_TOKEN only if you need HCP Terraform workspaces."
+  },
+  {
+    "slug": "grafana-mcp",
+    "name": "Grafana MCP",
+    "vendor": "Grafana Labs",
+    "type": "mcp-server",
+    "tasks": [
+      "observability-debug"
+    ],
+    "agents": [
+      "Claude Desktop",
+      "Cursor",
+      "VS Code"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Reads dashboards, datasources, Prometheus/Loki queries, incidents; some write tools.",
+    "credentials": "GRAFANA_URL plus a service account token (GRAFANA_SERVICE_ACCOUNT_TOKEN) or basic auth.",
+    "maintenance": "Release v2.0.2 on 2026-10-07; last commit 2026-10-14",
+    "lastActivity": "2026-10-07",
+    "install": "Binary, Docker image grafana/mcp-grafana or `uvx` (see README).",
+    "installUrl": "https://github.com/grafana/mcp-grafana/blob/main/README.md",
+    "sourceUrl": "https://github.com/grafana/mcp-grafana",
+    "license": "Apache-2.0",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Pick it to query dashboards, Prometheus and Loki from the agent; needs a Grafana service account token."
+  },
+  {
+    "slug": "chrome-devtools-mcp",
+    "name": "Chrome DevTools MCP",
+    "vendor": "Chrome DevTools (Google)",
+    "type": "mcp-server",
+    "tasks": [
+      "browser-testing",
+      "observability-debug",
+      "frontend-ui"
+    ],
+    "agents": [
+      "Claude Code",
+      "Cursor",
+      "VS Code"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Controls and inspects a Chrome instance (performance traces, network, console); README warns it exposes browser content to the client.",
+    "credentials": "None",
+    "maintenance": "Release chrome-devtools-mcp-v1.11.0 on 2026-10-15; last commit 2026-10-16",
+    "lastActivity": "2026-10-15",
+    "install": "Add `npx chrome-devtools-mcp@latest` to your client (README lists per-client steps).",
+    "installUrl": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/README.md",
+    "sourceUrl": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+    "license": "Apache-2.0",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Pick it for performance traces, network and console debugging; it exposes browser content to the client."
+  },
+  {
+    "slug": "mongodb-mcp",
+    "name": "MongoDB MCP Server",
+    "vendor": "MongoDB",
+    "type": "mcp-server",
+    "tasks": [
+      "database"
+    ],
+    "agents": [
+      "Cursor",
+      "VS Code",
+      "Codex",
+      "GitHub Copilot"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Runs queries/admin ops on a MongoDB database or Atlas; read-only mode documented.",
+    "credentials": "MongoDB connection string, or Atlas API client ID/secret.",
+    "maintenance": "Release v3.1.0 on 2026-10-15; last commit 2026-10-16",
+    "lastActivity": "2026-10-15",
+    "install": "`npx -y mongodb-mcp-server` with env vars from README (supports --readOnly).",
+    "installUrl": "https://github.com/mongodb-js/mongodb-mcp-server/blob/main/README.md",
+    "sourceUrl": "https://github.com/mongodb-js/mongodb-mcp-server",
+    "license": "Apache-2.0",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Pick it for MongoDB or Atlas queries; enable the documented read-only mode for exploration."
+  },
+  {
+    "slug": "neon-mcp",
+    "name": "Neon MCP Server",
+    "vendor": "Neon",
+    "type": "mcp-server",
+    "tasks": [
+      "database",
+      "infra-deploy"
+    ],
+    "agents": [
+      "Claude Code",
+      "Cursor",
+      "VS Code",
+      "GitHub Copilot"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Manages Neon projects, branches and runs SQL with your account's rights.",
+    "credentials": "Neon OAuth (remote) or NEON_API_KEY.",
+    "maintenance": "No GitHub release; last commit 2026-10-15",
+    "lastActivity": "2026-10-15",
+    "install": "`npx neon@latest init`, or add the remote server with `npx add-mcp https://mcp.neon.tech/mcp` (see README).",
+    "installUrl": "https://github.com/neondatabase/mcp-server-neon/blob/main/README.md",
+    "sourceUrl": "https://github.com/neondatabase/mcp-server-neon",
+    "license": "MIT",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Pick it to manage Neon branches and run SQL; it acts with your account's rights."
+  },
+  {
+    "slug": "notion-mcp",
+    "name": "Notion MCP Server",
+    "vendor": "Notion",
+    "type": "mcp-server",
+    "tasks": [
+      "docs-writing",
+      "knowledge-memory"
+    ],
+    "agents": [
+      "Claude Desktop",
+      "Cursor",
+      "GitHub Copilot",
+      "Zed"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Reads and writes pages/databases the integration is shared with.",
+    "credentials": "Notion integration token (NOTION_TOKEN) for local; OAuth for Notion's hosted MCP.",
+    "maintenance": "Release v2.1.0 on 2026-01-31; last commit 2026-09-20",
+    "lastActivity": "2026-01-31",
+    "install": "`npx -y @notionhq/notion-mcp-server` with NOTION_TOKEN (see README; hosted option documented there).",
+    "installUrl": "https://github.com/makenotion/notion-mcp-server/blob/main/README.md",
+    "sourceUrl": "https://github.com/makenotion/notion-mcp-server",
+    "license": "MIT",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Pick it to read/write Notion specs; it only sees pages shared with the integration."
+  },
+  {
+    "slug": "docker-mcp-gateway",
+    "name": "Docker MCP Gateway",
+    "vendor": "Docker",
+    "type": "mcp-server",
+    "tasks": [
+      "utilities",
+      "infra-deploy"
+    ],
+    "agents": [
+      "Claude Code",
+      "Claude Desktop",
+      "Cursor",
+      "VS Code"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Runs other MCP servers in containers on your machine; permissions depend on the servers you enable.",
+    "credentials": "Depends on each enabled server (secrets managed by Docker).",
+    "maintenance": "No GitHub release; last commit 2026-09-16",
+    "lastActivity": "2026-09-16",
+    "install": "Docker Desktop MCP Toolkit or `docker mcp gateway run` (see README).",
+    "installUrl": "https://github.com/docker/mcp-gateway/blob/main/README.md",
+    "sourceUrl": "https://github.com/docker/mcp-gateway",
+    "license": "MIT",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Pick it to run several MCP servers in containers; permissions depend on the servers you enable."
+  },
+  {
+    "slug": "azure-mcp",
+    "name": "Microsoft MCP (Azure MCP Server)",
+    "vendor": "Microsoft",
+    "type": "mcp-server",
+    "tasks": [
+      "infra-deploy",
+      "database"
+    ],
+    "agents": [
+      "Claude Code",
+      "VS Code",
+      "GitHub Copilot"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Acts on Azure resources with your signed-in identity/RBAC.",
+    "credentials": "Azure identity (az login / Entra ID).",
+    "maintenance": "Release Fabric.Mcp.Server-1.6.0 on 2026-10-18; last commit 2026-10-18",
+    "lastActivity": "2026-10-18",
+    "install": "See the repo README for the Azure MCP Server package and VS Code extension.",
+    "installUrl": "https://github.com/microsoft/mcp/blob/main/README.md",
+    "sourceUrl": "https://github.com/microsoft/mcp",
+    "license": "MIT",
+    "verifiedOn": "2026-10-18",
+    "archived": false,
+    "verdict": "Pick it for Azure resources from the agent; it acts with your signed-in identity and RBAC."
+  },
+  {
+    "slug": "firecrawl-mcp",
+    "name": "Firecrawl MCP Server",
+    "vendor": "Firecrawl",
+    "type": "mcp-server",
+    "tasks": [
+      "web-scraping",
+      "docs-research"
+    ],
+    "agents": [
+      "Claude Desktop",
+      "Cursor",
+      "VS Code",
+      "Windsurf"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Sends URLs to Firecrawl's hosted API to scrape/crawl/search.",
+    "credentials": "FIRECRAWL_API_KEY.",
+    "maintenance": "Release v3.2.1 on 2025-09-26; last commit 2026-10-16",
+    "lastActivity": "2025-09-26",
+    "install": "`npx -y firecrawl-mcp` with FIRECRAWL_API_KEY (see README).",
+    "installUrl": "https://github.com/firecrawl/firecrawl-mcp-server/blob/main/README.md",
+    "sourceUrl": "https://github.com/firecrawl/firecrawl-mcp-server",
+    "license": "MIT",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Pick it for crawling and scraping at scale; URLs are sent to Firecrawl's hosted API with your key."
+  },
+  {
+    "slug": "elasticsearch-mcp",
+    "name": "Elasticsearch MCP Server (deprecated)",
+    "vendor": "Elastic",
+    "type": "mcp-server",
+    "tasks": [
+      "database",
+      "observability-debug"
+    ],
+    "agents": [
+      "Claude Desktop",
+      "Cursor",
+      "VS Code"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Queries Elasticsearch indices with your credentials.",
+    "credentials": "ES_URL plus ES_API_KEY (or username/password).",
+    "maintenance": "Release v0.4.6 on 2025-10-24; last commit 2026-06-23 ; DEPRECATED per README",
+    "lastActivity": "2025-10-24",
+    "install": "README marks it deprecated (critical security fixes only) and points to Elastic Agent Builder's MCP endpoint.",
+    "installUrl": "https://github.com/elastic/mcp-server-elasticsearch/blob/main/README.md",
+    "sourceUrl": "https://github.com/elastic/mcp-server-elasticsearch",
+    "license": "Apache-2.0",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "verdict": "Avoid for new setups: the official README marks it deprecated; use it only on existing installs."
+  },
+  {
+    "slug": "netlify-mcp",
+    "name": "Netlify MCP Server",
+    "vendor": "Netlify",
+    "type": "mcp-server",
+    "tasks": [
+      "infra-deploy"
+    ],
+    "agents": [
+      "Windsurf",
+      "Cursor",
+      "Claude",
+      "VS Code",
+      "GitHub Copilot"
+    ],
+    "agentsSource": "clients listed with install/config instructions in the official README",
+    "permissions": "Creates, deploys and manages sites in your Netlify account.",
+    "credentials": "Netlify account login; a Personal Access Token only as a temporary auth workaround, as documented.",
+    "maintenance": "Release mcp-v1.19.0 on 2026-10-13",
+    "lastActivity": "2026-10-14",
+    "install": "Add `npx -y @netlify/mcp` to your client's MCP config (see README).",
+    "installUrl": "https://github.com/netlify/netlify-mcp#mcp-configuration",
+    "sourceUrl": "https://github.com/netlify/netlify-mcp",
+    "license": "NOASSERTION",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "release": {
+      "tag": "mcp-v1.19.0",
+      "date": "2026-10-13",
+      "url": "https://github.com/netlify/netlify-mcp/releases/tag/mcp-v1.19.0"
+    },
+    "verdict": "Pick it to build and deploy Netlify sites from the agent; it authenticates with your Netlify account."
+  },
+  {
+    "slug": "heroku-mcp-server",
+    "name": "Heroku Platform MCP Server",
+    "vendor": "Heroku",
+    "type": "mcp-server",
+    "tasks": [
+      "infra-deploy"
+    ],
+    "agents": [
+      "Claude Desktop",
+      "Zed",
+      "Cursor",
+      "Windsurf",
+      "Cline",
+      "VS Code",
+      "Trae"
+    ],
+    "agentsSource": "clients with an example configuration in the official README",
+    "permissions": "Manages Heroku apps, add-ons and resources with your Heroku CLI identity.",
+    "credentials": "Heroku CLI login (`heroku mcp:start`) or HEROKU_API_KEY.",
+    "maintenance": "Release mcp-server-v1.2.12 on 2026-10-12",
+    "lastActivity": "2026-10-12",
+    "install": "Run `heroku mcp:start` from your client's MCP config, or `npx -y @heroku/mcp-server` with HEROKU_API_KEY (see README).",
+    "installUrl": "https://github.com/heroku/heroku-mcp-server#configure-the-heroku-platform-mcp-server",
+    "sourceUrl": "https://github.com/heroku/heroku-mcp-server",
+    "license": "Apache-2.0",
+    "verifiedOn": "2026-10-16",
+    "archived": false,
+    "release": {
+      "tag": "mcp-server-v1.2.12",
+      "date": "2026-10-12",
+      "url": "https://github.com/heroku/heroku-mcp-server/releases/tag/mcp-server-v1.2.12"
+    },
+    "verdict": "Pick it to manage Heroku apps from the agent; the README recommends `heroku mcp:start` so you don't expose an API key."
+  },
+  {
+    "slug": "atlassian-mcp-server",
+    "name": "Atlassian Rovo MCP Server",
+    "vendor": "Atlassian",
+    "type": "mcp-server",
+    "tasks": [
+      "planning",
+      "docs-writing",
+      "repo-git"
+    ],
+    "agents": [
+      "Claude Code",
+      "Codex",
+      "Claude Desktop",
+      "VS Code",
+      "GitHub Copilot",
+      "Cursor",
+      "Windsurf"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Reads and writes Jira, Confluence, Bitbucket Cloud, Compass, Loom and other Atlassian Cloud data within your existing Atlassian permissions; org admins enable or revoke permission groups (read/write/search).",
+    "credentials": "Atlassian Cloud account via OAuth 2.1, or a scoped API token (an org admin must enable API-token auth; Jira Service Management tools are API-token only).",
+    "maintenance": "No GitHub release; last commit 2026-10-07",
+    "lastActivity": "2026-10-07",
+    "install": "Cloud-hosted: point your client at `https://mcp.atlassian.com/v2/mcp` (Claude Code: `claude mcp add --transport http atlassian https://mcp.atlassian.com/v2/mcp`); see README for other clients.",
+    "installUrl": "https://github.com/atlassian/atlassian-mcp-server#let-your-agent-do-the-setup",
+    "sourceUrl": "https://github.com/atlassian/atlassian-mcp-server",
+    "license": "Apache-2.0",
+    "verifiedOn": "2026-10-17",
+    "archived": false,
+    "verdict": "Pick it when the agent must read or update Jira issues, Confluence pages or Bitbucket repos; the README recommends the v2 endpoint for new setups."
+  },
+  {
+    "slug": "next-devtools-mcp",
+    "name": "Next.js DevTools MCP",
+    "vendor": "Vercel",
+    "type": "mcp-server",
+    "tasks": [
+      "observability-debug",
+      "frontend-ui"
+    ],
+    "agents": [
+      "Amp",
+      "Claude Code",
+      "Codex",
+      "Cursor",
+      "Gemini CLI",
+      "Google Antigravity",
+      "VS Code",
+      "GitHub Copilot",
+      "Warp"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Discovers local Next.js 16+ dev servers and proxies their built-in `/_next/mcp` tools (errors, routes, logs, Server Actions); sends anonymous usage telemetry unless NEXT_TELEMETRY_DISABLED=1.",
+    "credentials": "None",
+    "maintenance": "Release v0.4.0 on 2026-06-24; last commit 2026-09-15",
+    "lastActivity": "2026-06-24",
+    "install": "Run `npx -y next-devtools-mcp@latest` from your client's MCP config, or `npx add-mcp next-devtools-mcp@latest` (see README).",
+    "installUrl": "https://github.com/vercel/next-devtools-mcp#install",
+    "sourceUrl": "https://github.com/vercel/next-devtools-mcp",
+    "license": "MIT (stated in README; GitHub detects no LICENSE file)",
+    "verifiedOn": "2026-10-17",
+    "archived": false,
+    "release": {
+      "tag": "v0.4.0",
+      "date": "2026-06-24",
+      "url": "https://github.com/vercel/next-devtools-mcp/releases/tag/v0.4.0"
+    },
+    "verdict": "Pick it to let the agent read live errors, routes and logs from a running Next.js 16+ dev server; it needs `npm run dev` running."
+  },
+  {
+    "slug": "redis-mcp",
+    "name": "Redis MCP Server",
+    "vendor": "Redis",
+    "type": "mcp-server",
+    "tasks": [
+      "database"
+    ],
+    "agents": [
+      "Augment",
+      "Claude Desktop",
+      "VS Code",
+      "GitHub Copilot"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Reads and writes Redis data (strings, hashes, lists, sets, streams, JSON, vector search) with the connection's ACL rights; the README shows how to use a read-only ACL user.",
+    "credentials": "Redis connection URL or REDIS_HOST/REDIS_PORT plus REDIS_USERNAME/REDIS_PWD when auth is enabled; Entra ID for Azure Managed Redis.",
+    "maintenance": "Release 0.5.1 on 2026-08-05; last commit 2026-10-13",
+    "lastActivity": "2026-08-05",
+    "install": "Run `uvx --from redis-mcp-server@latest redis-mcp-server --url redis://localhost:6379/0` from your client's MCP config (see README).",
+    "installUrl": "https://github.com/redis/mcp-redis#installation",
+    "sourceUrl": "https://github.com/redis/mcp-redis",
+    "license": "MIT",
+    "verifiedOn": "2026-10-17",
+    "archived": false,
+    "release": {
+      "tag": "0.5.1",
+      "date": "2026-08-05",
+      "url": "https://github.com/redis/mcp-redis/releases/tag/0.5.1"
+    },
+    "verdict": "Pick it to let the agent inspect or cache data in Redis; connect it with a read-only ACL user unless writes are intended."
+  },
+  {
+    "slug": "sonarqube-mcp-server",
+    "name": "SonarQube MCP Server",
+    "vendor": "SonarSource",
+    "type": "mcp-server",
+    "tasks": [
+      "code-review"
+    ],
+    "agents": [
+      "Google Antigravity",
+      "Claude Code",
+      "Codex",
+      "Cursor",
+      "Gemini CLI",
+      "GitHub Copilot",
+      "Kiro",
+      "VS Code",
+      "Windsurf",
+      "Zed"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Reads issues, quality gates, measures, security hotspots, coverage and rules from SonarQube Cloud or Server with the token's rights, and can analyze file content; some tools write (e.g. changing issue status) unless SONARQUBE_READ_ONLY=true. Sends anonymous usage telemetry unless TELEMETRY_DISABLED=true.",
+    "credentials": "SonarQube user token (SONARQUBE_TOKEN) plus SONARQUBE_ORG for SonarQube Cloud or SONARQUBE_URL for SonarQube Server.",
+    "maintenance": "Release 1.29.0.4488 on 2026-10-13; last commit 2026-10-19",
+    "lastActivity": "2026-10-13",
+    "install": "Run the `sonarsource/sonarqube-mcp` container from your client's MCP config (e.g. `claude mcp add sonarqube`), or use the official configuration generator (see README).",
+    "installUrl": "https://github.com/SonarSource/sonarqube-mcp-server#quick-setup",
+    "sourceUrl": "https://github.com/SonarSource/sonarqube-mcp-server",
+    "license": "SONAR Source-Available License v1.0 (per LICENSE; GitHub detects no SPDX license)",
+    "verifiedOn": "2026-10-18",
+    "archived": false,
+    "release": {
+      "tag": "1.29.0.4488",
+      "date": "2026-10-13",
+      "url": "https://github.com/SonarSource/sonarqube-mcp-server/releases/tag/1.29.0.4488"
+    },
+    "verdict": "Pick it if your project already runs on SonarQube Cloud or Server and you want the agent to read issues and quality gates during review; set SONARQUBE_READ_ONLY=true for review-only use."
+  },
+  {
+    "slug": "microsoft-learn-mcp",
+    "name": "Microsoft Learn MCP Server",
+    "vendor": "Microsoft",
+    "type": "mcp-server",
+    "tasks": [
+      "docs-research"
+    ],
+    "agents": [
+      "VS Code",
+      "GitHub Copilot",
+      "Claude Desktop",
+      "Claude Code",
+      "Visual Studio",
+      "Cursor",
+      "Codex",
+      "Roo Code",
+      "Cline",
+      "Gemini CLI",
+      "Qwen Code",
+      "ChatGPT",
+      "Windsurf",
+      "Kiro"
+    ],
+    "agentsSource": "clients with a setup heading or install/config instructions in the official README",
+    "permissions": "Read-only tools: searches and fetches Microsoft Learn documentation and official code samples through Microsoft's hosted remote endpoint, so your queries go to that service.",
+    "credentials": "None (README: no API key or sign-in required).",
+    "maintenance": "No GitHub release; last commit 2026-10-17",
+    "lastActivity": "2026-10-17",
+    "install": "Add the remote endpoint https://learn.microsoft.com/api/mcp in your client (e.g. `codex mcp add \"microsoft-learn\" --url \"https://learn.microsoft.com/api/mcp\"`), or use the one-click installs in the README.",
+    "installUrl": "https://github.com/MicrosoftDocs/mcp#-installation--getting-started",
+    "sourceUrl": "https://github.com/MicrosoftDocs/mcp",
+    "license": "MIT for code (LICENSE-CODE); CC-BY-4.0 for docs (LICENSE)",
+    "verifiedOn": "2026-10-18",
+    "archived": false,
+    "verdict": "Pick it when the agent writes Azure, .NET or other Microsoft code and should look up current official docs and samples; it needs no credentials."
+  },
+  {
+    "slug": "buildkite-mcp-server",
+    "name": "Buildkite MCP Server",
+    "vendor": "Buildkite",
+    "type": "mcp-server",
+    "tasks": [
+      "ci-cd"
+    ],
+    "agents": [
+      "Amp",
+      "Claude Code",
+      "Claude Desktop",
+      "Cursor",
+      "Goose",
+      "VS Code",
+      "Windsurf"
+    ],
+    "agentsSource": "clients with a setup section in Buildkite's official remote MCP server docs (buildkite.com/docs/apis/mcp-server)",
+    "permissions": "Reads pipelines, builds, jobs, logs, annotations and test results; with write scopes it can retry jobs or start builds, which can run pipeline commands. A read-only remote endpoint and the --read-only flag exclude mutating tools.",
+    "credentials": "Buildkite OAuth on the hosted remote server, or a Buildkite API access token (BUILDKITE_API_TOKEN) for the local server.",
+    "maintenance": "Release v1.28.0 on 2026-10-13; last commit 2026-10-19",
+    "lastActivity": "2026-10-13",
+    "install": "Connect your client to Buildkite's hosted remote MCP server (OAuth), or run the local `buildkite-mcp-server stdio` with BUILDKITE_API_TOKEN (see the official docs).",
+    "installUrl": "https://buildkite.com/docs/apis/mcp-server/remote/configuring-ai-tools",
+    "sourceUrl": "https://github.com/buildkite/buildkite-mcp-server",
+    "license": "MIT",
+    "verifiedOn": "2026-10-18",
+    "archived": false,
+    "release": {
+      "tag": "v1.28.0",
+      "date": "2026-10-13",
+      "url": "https://github.com/buildkite/buildkite-mcp-server/releases/tag/v1.28.0"
+    },
+    "verdict": "Pick it to let the agent investigate failed Buildkite builds and logs; use the read-only endpoint unless you want it to retry jobs or start builds."
+  },
+  {
+    "slug": "datadog-mcp",
+    "name": "Datadog MCP Server",
+    "vendor": "Datadog",
+    "type": "mcp-server",
+    "tasks": [
+      "observability-debug"
+    ],
+    "agents": [
+      "ChatGPT",
+      "Claude Desktop",
+      "Claude Code",
+      "Codex",
+      "Cursor",
+      "Goose",
+      "VS Code",
+      "GitHub Copilot",
+      "Kiro",
+      "Warp",
+      "OpenCode"
+    ],
+    "agentsSource": "clients with a setup tab in Datadog's official MCP setup docs (docs.datadoghq.com/mcp_server/setup); GitHub README shows Claude Code quick start",
+    "permissions": "Queries Datadog observability data (logs, metrics, traces, monitors, dashboards, security signals and more) and can perform write actions that the authenticated user's Datadog permissions allow; write tools are rejected for read-only users.",
+    "credentials": "Datadog OAuth (recommended) or Datadog API and application keys for some clients.",
+    "maintenance": "Managed remote server; no GitHub release on datadog-labs/mcp-server; CHANGELOG updated through 2026-10-15; last commit 2026-10-16",
+    "lastActivity": "2026-10-16",
+    "install": "Use `claude mcp add --transport http datadog` with the US1 URL https://mcp.datadoghq.com/v1/mcp (or your regional endpoint), or install the Datadog plugin/connector for your client (see setup docs).",
+    "installUrl": "https://docs.datadoghq.com/bits_ai/mcp_server/setup/",
+    "sourceUrl": "https://github.com/datadog-labs/mcp-server",
+    "license": "MIT",
+    "verifiedOn": "2026-10-19",
+    "archived": false,
+    "verdict": "Pick it to investigate production issues from the agent using your Datadog account; OAuth keeps access within your existing RBAC."
+  },
+  {
+    "slug": "figma-mcp",
+    "name": "Figma MCP Server",
+    "vendor": "Figma",
+    "type": "mcp-server",
+    "tasks": [
+      "frontend-ui"
+    ],
+    "agents": [
+      "VS Code",
+      "Cursor",
+      "Claude Code",
+      "Gemini CLI"
+    ],
+    "agentsSource": "clients with a setup section in Figma's official MCP server guide README",
+    "permissions": "Reads Figma design context (frames, components, variables, layout) and can write to the canvas or generate/upload images when those tools are enabled; write-to-canvas is in a free beta that Figma says will become usage-based later.",
+    "credentials": "Figma account OAuth when connecting the remote server (client-specific auth, e.g. `/mcp auth figma` in Gemini CLI).",
+    "maintenance": "Hosted remote server (MCP Registry / server.json version 2.2.157); guide repo last commit 2026-10-19; no GitHub release",
+    "lastActivity": "2026-10-19",
+    "install": "Connect to https://mcp.figma.com/mcp (Streamable HTTP). Examples: `claude mcp add --transport http figma https://mcp.figma.com/mcp`, or install via `gemini extensions install` from https://github.com/figma/mcp-server-guide (see README).",
+    "installUrl": "https://github.com/figma/mcp-server-guide#installation--setup",
+    "sourceUrl": "https://github.com/figma/mcp-server-guide",
+    "license": "Not stated (guide repository has no LICENSE file)",
+    "verifiedOn": "2026-10-19",
+    "archived": false,
+    "verdict": "Pick it to pull design context into code or (in beta) write back to the Figma canvas; you need a Figma account and a client that supports remote Streamable HTTP."
+  },
+  {
+    "slug": "mcp-toolbox",
+    "name": "MCP Toolbox for Databases",
+    "vendor": "Google",
+    "type": "mcp-server",
+    "tasks": [
+      "database"
+    ],
+    "agents": [
+      "Gemini CLI",
+      "Claude Code",
+      "Codex",
+      "Google Antigravity"
+    ],
+    "agentsSource": "clients named with MCP configuration instructions in the official README (Gemini CLI has dedicated install steps; others are listed for the prebuilt MCP server)",
+    "permissions": "Runs database tools you configure (prebuilt generic tools such as list_tables/execute_sql, or custom toolsets): can read schemas and run SQL against the connected sources with the credentials you give the Toolbox process.",
+    "credentials": "Database connection env vars for the chosen prebuilt source (see Prebuilt Tools Reference); Google Cloud sources can use Application Default Credentials / IAM.",
+    "maintenance": "Release v1.14.0 on 2026-10-08; last commit 2026-10-15",
+    "lastActivity": "2026-10-08",
+    "install": "Run `npx -y @toolbox-sdk/server --prebuilt=postgres --stdio` (other `--prebuilt` databases in the README), or install the binary and point your MCP client at the local Toolbox HTTP endpoint shown in the README Connect section.",
+    "installUrl": "https://github.com/googleapis/mcp-toolbox#quick-start-prebuilt-tools",
+    "sourceUrl": "https://github.com/googleapis/mcp-toolbox",
+    "license": "Apache-2.0",
+    "verifiedOn": "2026-10-19",
+    "archived": false,
+    "release": {
+      "tag": "v1.14.0",
+      "date": "2026-10-08",
+      "url": "https://github.com/googleapis/mcp-toolbox/releases/tag/v1.14.0"
+    },
+    "verdict": "Pick it to explore schemas and run SQL from the agent across many databases (Postgres, BigQuery, Cloud SQL, Spanner and others); prefer custom toolsets when you need restricted queries in production."
+  }
+]
