@@ -7,7 +7,7 @@ Open data behind [AgentTask Atlas](https://agenttaskatlas.com): a small, curated
 - **MCP tool budget data (measured tool counts and tool-definition tokens per MCP server):** https://agenttaskatlas.com/mcp-tool-budget
 - **Official MCP Registry:** [`com.agenttaskatlas/catalog`](https://registry.modelcontextprotocol.io/v0.1/servers?search=agenttaskatlas)
 
-Every entry (78 as of the 2026-10-26 sync: 67 MCP servers, 11 Agent Skills) records the dev tasks it fits, which clients document it, the permissions and credentials it needs, the official install step, the source link, the license, the last verified date and a one-line practical verdict.
+Every entry (81 as of the 2026-10-28 sync: 70 MCP servers, 11 Agent Skills) records the dev tasks it fits, which clients document it, the permissions and credentials it needs, the official install step, the source link, the license, the last verified date and a one-line practical verdict.
 
 > **Honest caveat:** entries summarize official sources (READMEs, docs, release pages). Nothing is hands-on tested and there is **no independent security audit**. Review permissions and code at the source before installing anything.
 

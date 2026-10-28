@@ -577,6 +577,7 @@
       "docs-research"
     ],
     "agents": [
+      "Claude Code",
       "Cursor",
       "VS Code"
     ],
@@ -2434,5 +2435,106 @@
       "url": "https://github.com/angular/angular-cli/releases/tag/v22.2.4"
     },
     "verdict": "Pick it when the agent works on an Angular app and should use current Angular APIs, run builds and tests itself, and follow version-matched best practices; start with --read-only if you only want docs and analysis."
+  },
+  {
+    "slug": "svelte-mcp",
+    "name": "Svelte MCP Server",
+    "vendor": "Svelte",
+    "type": "mcp-server",
+    "tasks": [
+      "frontend-ui",
+      "docs-research"
+    ],
+    "agents": [
+      "Claude Code",
+      "Claude Desktop",
+      "Codex",
+      "GitHub Copilot",
+      "Google Antigravity",
+      "OpenCode",
+      "VS Code",
+      "Cursor",
+      "Zed"
+    ],
+    "agentsSource": "clients with setup steps in the official Svelte AI docs (svelte.dev/docs/ai/local-setup and /remote-setup)",
+    "permissions": "Read-only helper: lists and fetches sections of the official Svelte and SvelteKit documentation, runs the svelte-autofixer static analysis on code you pass it, and builds Svelte Playground links. It does not edit your files or call your services.",
+    "credentials": "None (local stdio server via npx, or the hosted endpoint https://mcp.svelte.dev/mcp without sign-in).",
+    "maintenance": "Official repo sveltejs/ai-tools (formerly sveltejs/mcp), release @sveltejs/mcp@0.1.28 on 2026-10-26 (npm @sveltejs/mcp 0.1.28); hosted remote at https://mcp.svelte.dev/mcp",
+    "lastActivity": "2026-10-26",
+    "install": "Claude Code: `claude mcp add -t stdio -s user svelte -- npx -y @sveltejs/mcp` (local) or `claude mcp add -t http -s user svelte https://mcp.svelte.dev/mcp` (remote). Other clients: command `npx` with args `-y @sveltejs/mcp`, or the remote URL https://mcp.svelte.dev/mcp; plugins exist for Claude Code, Codex, Copilot CLI, OpenCode and Cursor.",
+    "installUrl": "https://svelte.dev/docs/ai/local-setup",
+    "sourceUrl": "https://github.com/sveltejs/ai-tools",
+    "license": "MIT",
+    "verifiedOn": "2026-10-28",
+    "archived": false,
+    "release": {
+      "tag": "@sveltejs/mcp@0.1.28",
+      "date": "2026-10-26",
+      "url": "https://github.com/sveltejs/ai-tools/releases/tag/%40sveltejs/mcp%400.1.28"
+    },
+    "verdict": "Pick it when an agent writes Svelte 5 / SvelteKit code: it pulls current docs on demand and the autofixer catches runes and legacy-syntax mistakes before you run the code."
+  },
+  {
+    "slug": "convex-mcp",
+    "name": "Convex MCP Server",
+    "vendor": "Convex",
+    "type": "mcp-server",
+    "tasks": [
+      "database",
+      "observability-debug"
+    ],
+    "agents": [
+      "Claude Code",
+      "Cursor",
+      "Codex",
+      "GitHub Copilot",
+      "Conductor"
+    ],
+    "agentsSource": "clients named in the official Convex docs (docs.convex.dev/ai/convex-mcp-server: plugin for Claude Code and Cursor, setup pages for Codex, GitHub Copilot and Conductor)",
+    "permissions": "Works on your Convex deployments: lists deployments, tables and schemas, pages through documents, runs sandboxed read-only queries, reads function specs, logs and 72-hour health insights, runs deployed functions, and lists/gets/sets/removes environment variables. By default production is limited to non-PII read-only tools (insights, tables, functionSpec); `--disable-tools` removes tools.",
+    "credentials": "Your Convex login (`npx convex login`, all projects your account can access) or a scoped CONVEX_DEPLOY_KEY to pin it to one deployment.",
+    "maintenance": "Ships inside the official Convex CLI (`npx convex mcp start`): npm convex 1.48.0 published 2026-10-22; source get-convex/convex-backend (npm-packages/convex), last commit 2026-10-28",
+    "lastActivity": "2026-10-28",
+    "install": "Add `npx -y convex@latest mcp start` as a stdio server (optionally `--project-dir /path/to/project`); in Claude Code or Cursor the Convex plugin starts it for you.",
+    "installUrl": "https://docs.convex.dev/ai/convex-mcp-server",
+    "sourceUrl": "https://github.com/get-convex/convex-backend/tree/main/npm-packages/convex",
+    "license": "Apache-2.0",
+    "verifiedOn": "2026-10-28",
+    "archived": false,
+    "verdict": "Pick it when the agent builds on Convex and should inspect real tables, logs and function signatures; keep the production defaults and use a deploy key to confine it to one dev deployment."
+  },
+  {
+    "slug": "sanity-mcp",
+    "name": "Sanity MCP Server (hosted)",
+    "vendor": "Sanity",
+    "type": "mcp-server",
+    "tasks": [
+      "database",
+      "infra-deploy"
+    ],
+    "agents": [
+      "Claude Code",
+      "Codex",
+      "Cursor",
+      "VS Code",
+      "OpenCode",
+      "v0",
+      "Lovable",
+      "Replit",
+      "Gemini CLI",
+      "Zed"
+    ],
+    "agentsSource": "clients with setup steps in the official Sanity docs (sanity.io/docs/ai/mcp-server), including those `npx sanity@latest mcp configure` sets up",
+    "permissions": "Acts on your Sanity organization within your role: runs GROQ queries, reads and deploys schemas, creates, patches, publishes and unpublishes documents and release versions, uploads assets, manages datasets, projects and CORS origins, deploys a managed Studio, runs a limited subset of Sanity CLI commands, and searches Sanity docs. generate_image and transform_image spend AI credits.",
+    "credentials": "Sanity account via OAuth (default) or a Sanity API token in an `Authorization: Bearer` header, limited to that token's role.",
+    "maintenance": "Hosted remote server https://mcp.sanity.io (GA since v2.6.0, 2025-12-11); changelog v2.44.0 on 2026-10-27. The old open-source sanity-io/sanity-mcp-server repo is archived and points to the hosted server.",
+    "lastActivity": "2026-10-27",
+    "install": "Run `npx sanity@latest mcp configure` to set up detected editors, or add it manually: Claude Code `claude mcp add Sanity -t http https://mcp.sanity.io --scope user`, then authenticate with OAuth; in Cursor or VS Code add an http server with url https://mcp.sanity.io and sign in when prompted.",
+    "installUrl": "https://www.sanity.io/docs/ai/mcp-server",
+    "sourceUrl": "https://www.sanity.io/docs/ai/mcp-server",
+    "license": "Not stated (hosted service)",
+    "verifiedOn": "2026-10-28",
+    "archived": false,
+    "verdict": "Pick it when the agent works on a Sanity-backed site and should query content, evolve schemas and draft documents itself; edits land as drafts, but use a token with a limited role if it should not publish or touch datasets."
   }
 ]
